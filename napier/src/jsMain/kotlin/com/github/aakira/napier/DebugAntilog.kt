@@ -2,8 +2,6 @@ package com.github.aakira.napier
 
 class DebugAntilog(private val defaultTag: String) : Antilog() {
 
-    override fun isEnable(priority: Napier.Level, tag: String?) = priority != Napier.Level.VERBOSE
-
     override fun performLog(priority: Napier.Level, tag: String?, throwable: Throwable?, message: String?) {
         val logTag = tag ?: defaultTag
 
