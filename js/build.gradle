@@ -14,19 +14,19 @@ kotlin {
     target {
         browser {
             // execute :js:browserRun to launch dev server
-            runTask {
-                devServer = new KotlinWebpackConfig.DevServer(
-                        true, false, true, true, false,
-                        8080,
-                        null,
-                        ["${projectDir}/src/main/resources".toString()]
-                )
-                archiveFileName = 'main.js'
-            }
-            // execute :js:browserWebpack to build webpack bundle in `./build/distributions`
-            webpackTask {
-                archiveFileName = 'main.js'
-            }
+            // runTask {
+            //     devServer = new KotlinWebpackConfig.DevServer(
+            //             true, false, true, true, false,
+            //             8080,
+            //             null,
+            //             ["${projectDir}/src/main/resources".toString()]
+            //     )
+            //     archiveFileName = 'main.js'
+            // }
+            // // execute :js:browserWebpack to build webpack bundle in `./build/distributions`
+            // webpackTask {
+            //     archiveFileName = 'main.js'
+            // }
         }
     }
 }
