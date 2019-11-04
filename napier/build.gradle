@@ -104,3 +104,17 @@ kotlin {
 configurations {
     compileClasspath
 }
+
+publishing {
+    repositories {
+        maven {
+            name = "bintray"
+            url = "https://api.bintray.com/maven/icerockdev/kotlin-libs/napier/;publish=1"
+
+            credentials {
+                username = System.getProperty("BINTRAY_USER")
+                password = System.getProperty("BINTRAY_KEY")
+            }
+        }
+    }
+}
